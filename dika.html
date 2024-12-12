@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Made Dika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 0 auto;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project h3 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+        .project p {
+            padding: 0 1rem 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bobi</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="bobi.dika02@gmail.com">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Saya Bobi saya gitaris gagal</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="/img/Gambar WhatsApp 2024-12-12 pukul 16.48.22_b723a008.jpg" alt="Project 1">
+                    <h3>Event</h3>
+                    <p>Be apart of event in campus</p>
+                </div>
+                <div class="project">
+                    <img src="/img/Gambar WhatsApp 2024-12-12 pukul 16.50.40_0d175dc1.jpg" alt="Project 2">
+                    <h3>Event</h3>
+                    <p>Be apart in the school.</p>
+                </div>
+                <div class="project">
+                    <img src="/img/Gambar WhatsApp 2024-12-12 pukul 16.53.29_366b26f0.jpg" alt="Project 3">
+                    <h3>Event</h3>
+                    <p>Be a bassis in my band.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a> or connect with me on social media.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
