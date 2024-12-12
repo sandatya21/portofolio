@@ -1,384 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Portfolio</title>
-    <!-- font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/dayu.css">
+    <title>Apollo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jade website template">
+    <meta name="keywords" content="apollo, jade, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
   </head>
-  <body class="dark:bg-slate-900 dark:text-gray-200">
-    <!-- header -->
-    <header class="fixed w-full py-4 lg:px-0 px-5 z-[999] duration-300">
-      <nav class="flex justify-between items-center max-w-6xl mx-auto px-2">
-        <div class="flex gap-4 items-center">
-          <div
-            class="bg-primary text-white rounded-full size-10 text-xl flex-center"
-          >
-            R
-          </div>
+  <body>
+    <section id="hero"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 163.5" style="enable-background:new 0 0 100 163.5;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M352.5,7487.4C351.4,7484.3,0,5858.4,0,5856.4c0-0.7,74-0.9,164.1-0.7l164.3,0.7l31.6,174.6l31.6,174.6h106.9h106.9l24.4-127.7c13.5-70.3,28.6-149.1,33.6-175l9.2-47.6h163.5H1000l-1.1,4.8c-2.8,11.1-350.7,1626.1-350.7,1627.9c0,1.1-61.1,2-147.3,2C384.8,7490,353.1,7489.3,352.5,7487.4z M542.3,6713.5c22.3-163.5,40.4-298.8,40.4-300.5c0-2.8-10.7-3.3-84-3.3h-84.2l1.3,7.2c2.2,12.7,84,590.8,84,593.4C499.8,7022.7,507,6971.7,542.3,6713.5z"/>
+</g>
+</svg>
+      <header>
+        <div class="nav-toggle">
+          <p>Menu</p><span></span>
         </div>
-        <div>
-          <h4 class="font-bold text-lg uppercase">Daysu</h4>
-          <p class="text-xs">Profile</p>
-        </div>
-
-        <ul class="md:flex hidden gap-10 hover:*:text-primary *:duration-200">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <span class="theme-switch md:block hidden">
-            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
-          </span>
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#full-slide">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <div class="flex items-center gap-6">
-          <a href="#contact">
-            <button class="btn btn-outline md:!flex !hidden">
-              <i class="fa-regular ra-paper-plane"></i>
-              Let's Talk
-            </button>
-          </a>
-          <span class="theme-switch md:hidden">
-            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
-          </span>
-          <span id="menubar" class="cursor-pointer md:hidden text-xl">
-            <i class="fa-solid fa-bars"></i>
-          </span>
+      </header>
+      <div class="wrapper">
+        <div class="welcome">
+          <h1><strong>Apollo</strong> Jade Template</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
         </div>
-      </nav>
-    </header>
-
-    <!-- backdrop -->
-    <span
-      id="backdrop"
-      class="fixed h-screen bg-black/10 inset-0 backdrop-blur-sm z-[997] hidden"
-    ></span>
-
-    <!-- mobile nav -->
-    <ul
-      id="mobile-nav"
-      class="flex-center flex-col gap-10 fixed w-full bottom-0 duration-200 left-0 z-[998] text-xl md:hidden dark:bg-slate-800 bg-primary text-white rounded-t-3xl h-0 overflow-hidden"
-    >
-      <li>
-        <a href="#home">Home</a>
-      </li>
-      <li>
-        <a href="#about">About Me</a>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
-      <li>
-        <a href="#contact">Contact Me</a>
-      </li>
-    </ul>
-
-    <!-- Home -->
-    <section
-      id="home"
-      class="min-h-screen container grid place-items-center relative before:absolute before:top-0 before:bg-heroLight before:size-full before:start-1/2 before:transform before:-translate-x-1/2 before:bg-no-repeat before:-z-[1] before:dark:bg-heroDark"
-    >
-      <div
-        class="size-full pt-20 grid md:grid-cols-6 items-center justify-around max-w-6xl"
-      >
-        <div
-          class="lg:col-span-2 md:col-span-3 md:text-left text-center sm:pl-2"
-        >
-          <div>
-            <h5 class="font-medium text-gray-600 dark:text-gray-200">
-              Hay Welcome !
-            </h5>
-            <h1
-              class="sm:text-5xl text-4xl !leading-normal dark:text-white relative font-medium"
-            >
-              I'm <span class="text-primary">Daysu</span> <br />Website Designer
-            </h1>
-            <button class="btn btn-filled mt-5">
-              <i class="fa-regular fa-envelope"></i>Hire Me
-            </button>
-            <button
-              class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4"
-            >
-              <i class="fa-solid fa-up-right-from-square"></i> See Portofolio
-            </button>
-          </div>
-          <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
-            <i class="fa-solid fa-border-all mt-0.5 md:inline-block hidden"></i>
-            <p class="text-xs text-balance leading-5 max-w-md px-2 mx-auto">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
-              soluta quasi eius vero perspiciatis amet suscipit officia
-              laudantium at provident!
-            </p>
-          </div>
-          <div
-            class="flex items-center md:justify-end justify-center mt-9 gap-6 dark:text-gray-200 text-gray-600"
-          >
-            <p class="text-xs">Follow Us</p>
-            <div class="flex gap-3">
-              <a href="#" class="social-icon">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-2 md:col-span-3">
-          <img
-            src="./assets/person.png"
-            class="md:w-full max-w-96 md:mt-0 mt-5 w-2/3 mx-auto"
-            alt=""
-          />
-        </div>
-        <div
-          class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none bg-gradient-to-l from-gray-100 dark:from-slate-800 md:mt-0 mt-2 lg:h-96 md:h-auto h-96"
-        >
-          <ul
-            class="text-2xl leading-[3.14rem] text-center pt-5 lg:block md:flex items-center justify-between data-[slot=count]:*:text-3xl data-[slot=count]:*:font-bold"
-          >
-            <li data-slot="count">12+</li>
-            <li>Year of <span class="text-primary">Experience</span></li>
-            <br />
-            <li data-slot="count">8+</li>
-            <li>Completed<span class="text-primary">Projects</span></li>
-            <li>
-              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10">
-                <i class="fa-solid fa-download"></i>Download CV
-              </button>
-            </li>
-          </ul>
+        <div class="photographer"><img src="assets/img/hero.png" alt="Photographer"></div>
+      </div>
+    </section>
+    <section id="about"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 203.6" style="enable-background:new 0 0 100 203.6;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6471.9V5454.2h206.5h206.5v436.2v436.2h7.6c19.8,0.3,107.9,5.7,128.3,8.2c90.2,10.9,154.9,29.4,220.4,62.8c141.1,72.6,213.3,213.3,228.3,444.1c8.7,135.3-7.3,272.3-42.9,368.3c-48.6,130.5-131,212.8-253.8,253.8c-15.5,5.2-43.5,12.8-62.2,17.1l-34,7.3l-302.2,0.8L0,7490V6471.9z M490.5,7190.8c51.1-13.6,71.2-28.8,92.9-69.8c22.3-41.9,26.4-81.5,24.7-243.2l-1.4-115l-8.4-32.1c-10.9-40.5-13.6-45.4-35.6-67.9c-21.2-22-30.7-27.4-60.6-34.5c-18.8-4.3-68.2-10.9-82.6-10.9c-3.3,0-3.8,44-3.8,291.1v291.3l26.6-1.6C456.8,7197.3,478.6,7194,490.5,7190.8z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <div class="camera"><img src="assets/img/camera.png" alt="Camera"></div>
+        <div class="blurb">
+          <h2>My name is <strong>Apollo</strong></h2>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br>Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          <div class="social"><a href="#"><i class="icon-facebook"></i></a><a href="#"><i class="icon-instagram"></i></a><a href="#"><i class="icon-twitter"></i></a><a href="#"><i class="icon-pinterest-p"></i></a></div>
         </div>
       </div>
     </section>
-
-    <!-- About -->
-    <section id="about" class="container min-h-screen flex-center">
-      <div>
-        <div class="text-center text-balance">
-          <h3>What I Know</h3>
-          <p class="px-2 mt-3 text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            dignissimos velit rem corrupti accusantium sequi modi ullam
-            quibusdam necessitatibus laudantium nihil in quas delectus,
-            distinctio dolor doloremque iusto consequuntur aut nulla facere
-            esse? Accusantium laborum maxime aspernatur quaerat, voluptas vitae
-            nesciunt excepturi ad temporibus non nam voluptates facere, numquam,
-            ratione culpa libero! Unde quis voluptatibus earum corrupti minus
-            molestiae sunt aliquid ipsam maxime. Sapiente ab nostrum adipisci
-            quibusdam modi repudiandae.
-          </p>
+    <section id="full-slide"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 171.2" style="enable-background:new 0 0 100 171.2;" xml:space="preserve">
+<g transform="translate(0.000000,750.000000) scale(0.100000,-0.100000)">
+	<path d="M253.7,7486.3c-151.6-74.7-233.3-224.4-251.4-460.9c-3.2-41.5-3-726.7,0-763.9c7.5-86.3,21.9-155.7,44.5-213.7c51.4-130.6,124.4-207.8,239.3-253.2l17.8-6.8l197.9,0.5l197.9,0.7l22.8,10c98.4,42.7,167.6,112.8,214.8,217.1c34.2,75.6,52.5,154.8,60.3,260.3c3.2,42,3,700.9,0,743.1c-8.2,113.2-29.2,200.4-66,276.2c-44.1,90.4-104.6,151.6-190.9,193.4l-22.8,11H499.8H281.5L253.7,7486.3zM541.1,7263.7c52.3-15.8,85.6-58.7,101.8-131.3c11.4-51.6,11.2-43.8,11.2-488.6c0-384-0.2-418.7-3.9-444.3c-9.8-68.3-28.5-112.8-59.4-141.8c-24-22.4-52.5-32.6-92-32.6c-35.2,0-57.5,6.8-82.2,25.8c-40.9,30.8-63.2,89-69.9,182c-1.6,21.7-2.1,171.2-1.6,434.9c0.9,362.1,1.4,404.1,4.8,425.1c7.1,43.4,21,89,34.2,112.6c16.4,28.8,49.5,52.7,83.8,60.5C486.3,7270.1,523.3,7269,541.1,7263.7z"/>
+</g>
+</svg>
+      <ul class="banner">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul><i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
+    </section>
+    <section id="featured"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 248.8" style="enable-background:new 0 0 100 248.8;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6245.8V5001.6h500h500V5176v174.4H752.5H505v1069.8V7490H252.5H0V6245.8z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Ut enim</strong> ad minim</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         </div>
-        <div
-          class="max-w-2xl grid md:grid-cols-1 sm:grid-cols-3 gap-6 px-2 mt-10 mx-auto *:text-lg *:bg-gray-100 *:dark:bg-slate-800 *:p-7 *:flex *:items-center *:gap-12 *:md:flex-row *:flex-col *:rounded-xl *:max-w-sm *:sm:max-w-full *:mx-auto *:text-center *:sm:text-left hover:*:brightness-90 *:shadow-sm *:cursor-pointer"
-        >
-          <div>
-            <div class="*:text-primary">
-              <i class="fa-regular fa-object-ungroup"></i>
-              <h6 class="font-semibold whitespace-nowrap mt-3">
-                Website Design
-              </h6>
-            </div>
-            <div>
-              <p
-                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
-                quisquam.
-              </p>
-            </div>
-            <i
-              class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"
-            >
-            </i>
-          </div>
-          <div>
-            <div class="*:text-primary">
-              <i class="fa-solid fa-pen-nib"></i>
-              <h6 class="font-semibold whitespace-nowrap mt-3">Ui Ux Design</h6>
-            </div>
-            <div>
-              <p
-                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
-                quisquam.
-              </p>
-            </div>
-            <i
-              class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"
-            >
-            </i>
-          </div>
-          <div>
-            <div class="*:text-primary">
-              <i class="fa-solid fa-people-group"></i>
-              <h6 class="font-semibold whitespace-nowrap mt-3">Teams Play</h6>
-            </div>
-            <div>
-              <p
-                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
-                quisquam.
-              </p>
-            </div>
-            <i
-              class="fa-solid fa-arrow-up-long text-primary cursor-pointer rotate-45"
-            >
-            </i>
-          </div>
-        </div>
+        <div class="featured"><img src="assets/img/featured.jpg" alt="Featured"></div>
       </div>
     </section>
-
-    <!-- Projects -->
-    <section id="projects" class="container min-h-screen flex-center">
-      <div class="text-center text-balance">
-        <h3>My Projects</h3>
-        <p class="px-2 mt-3 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          explicabo assumenda amet libero eius hic fugit a facere! Magnam
-          laborum facere voluptatibus veniam neque enim placeat ex
-          reprehenderit, iure molestiae dicta asperiores, quis odio id atque
-          commodi eos, earum quam.
-        </p>
-        <br />
-        <div class="flex-center gap-4">
-          <button class="btn btn-filed">Website</button>
-          <button class="btn btn-outline">Mobile App</button>
-          <button class="btn btn-outline">Figma</button>
-        </div>
-        <br />
-        <div
-          class="*:size-full *:object-cover *:border-4 *:dark:border-white *:rounded-md gap-4 *:cursor-pointer *:duration-1000 mx-auto max-w-4xl grid md:grid-rows-2 md:grid-cols-2 md:px-0 px-10 *:hover:grayscale hover:*:grayscale-0"
-        >
-          <img src="./assets/pro1.jpg" alt="" />
-          <img src="./assets/pro2.jpg" alt="" class="row-span-2" />
-          <img src="./assets/pro3.jpg" alt="" />
-        </div>
-      </div>
+    <section id="three-slide"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 248.8" style="enable-background:new 0 0 100 248.8;" xml:space="preserve">
+<g transform="translate(0.000000,749.000000) scale(0.100000,-0.100000)">
+	<path d="M0,6245.8V5001.6h500h500V5176v174.4H752.5H505v1069.8V7490H252.5H0V6245.8z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <ul class="slider">
+          <li class="back"><img src="assets/img/three-slide/thumb-1.jpg"></li>
+          <li class="current"><img src="assets/img/three-slide/thumb-2.jpg"></li>
+          <li class="front"><img src="assets/img/three-slide/thumb-3.jpg"></li>
+          <li><img src="assets/img/three-slide/thumb-4.jpg"></li>
+        </ul>
+      </div><i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
     </section>
-
-    <!-- Contact -->
-    <section
-      id="contact"
-      class="container relative max-w-4xl mx-auto min-h-screen flex-center px-5"
-    >
-      <div class="pb-10">
-        <div class="text-center">
-          <h3>Contact Me</h3>
-          <p class="px-2 mt-3 text-gray-500">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            nostrum saepe veniam, natus eum enim ipsa neque, mollitia
-            dignissimos assumenda aut laborum, eaque beatae tempore blanditiis
-            repudiandae dolorem? Nulla, veniam.
-          </p>
+    <section id="contact"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 171.2" style="enable-background:new 0 0 100 171.2;" xml:space="preserve">
+<g transform="translate(0.000000,750.000000) scale(0.100000,-0.100000)">
+	<path d="M253.7,7486.3c-151.6-74.7-233.3-224.4-251.4-460.9c-3.2-41.5-3-726.7,0-763.9c7.5-86.3,21.9-155.7,44.5-213.7c51.4-130.6,124.4-207.8,239.3-253.2l17.8-6.8l197.9,0.5l197.9,0.7l22.8,10c98.4,42.7,167.6,112.8,214.8,217.1c34.2,75.6,52.5,154.8,60.3,260.3c3.2,42,3,700.9,0,743.1c-8.2,113.2-29.2,200.4-66,276.2c-44.1,90.4-104.6,151.6-190.9,193.4l-22.8,11H499.8H281.5L253.7,7486.3zM541.1,7263.7c52.3-15.8,85.6-58.7,101.8-131.3c11.4-51.6,11.2-43.8,11.2-488.6c0-384-0.2-418.7-3.9-444.3c-9.8-68.3-28.5-112.8-59.4-141.8c-24-22.4-52.5-32.6-92-32.6c-35.2,0-57.5,6.8-82.2,25.8c-40.9,30.8-63.2,89-69.9,182c-1.6,21.7-2.1,171.2-1.6,434.9c0.9,362.1,1.4,404.1,4.8,425.1c7.1,43.4,21,89,34.2,112.6c16.4,28.8,49.5,52.7,83.8,60.5C486.3,7270.1,523.3,7269,541.1,7263.7z"/>
+</g>
+</svg>
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Say</strong> Hello</h2>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         </div>
-        <div
-          class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto max-w-xs"
-        >
-          <div
-            class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 rounded-lg shadow-xl mx-auto md:w-2/3 w-full py-14 px-7"
-          >
-            <h3 class="font-semibold">
-              Send Me A <br />
-              <span>Message</span>
-            </h3>
-            <form class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full">
-              <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Enter your name" />
-              </div>
-              <div>
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <div>
-                <label for="message"> Message</label>
-                <textarea
-                  type="text"
-                  id="message"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              <button class="btn btn-filled ml-auto">Send to Me</button>
-            </form>
-          </div>
-          <div class="">
-            <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">
-              Drop In Our <br />
-              Office <span class="text-primary">.</span>
-            </h3>
-            <div class="py-4">
-              <p class="text-xs text-gray-400 leading-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Adipisci nulla sint ad perspiciatis nobis? Delectus repudiandae
-                esse sapiente totam aliquam.
-              </p>
-              <ul>
-                <li>
-                  <a href=""></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <form>
+          <input type="email" placeholder="Your Email">
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Message"></textarea>
+          <input type="submit" value="Send Message">
+        </form>
       </div>
+      <p class="copyright">&copy; Apollo 2016</p>
     </section>
-
-    <!-- Footer -->
-    <footer></footer>
-
-    <script type="module" src="/main.js"></script>
-
-    <!-- sticky nav script -->
-    <script>
-      const header = document.querySelector("header");
-
-      const toggleClasses = (element, classes, condition) => {
-        classses.forEach((className) => {
-          element.classList.toggle(className, condition);
-        });
-      };
-      window.addEventListener("scroll", () => {
-        toggleClasses(
-          header,
-          [
-            "bg-white",
-            "dark:text-white",
-            "dark:bg-slate-800",
-            "shadow-lg",
-            "dark:sm:bg-slate-900",
-          ],
-          window.scollY > 0
-        );
-      });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="assets/js/functions-min.js"></script>
   </body>
 </html>
