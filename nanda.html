@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Nanda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section p:first-child {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 2px;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #333;
+            border-color: transparent;
+        }
+
+        .loading {
+            font-size: 1.2em;
+            color: #999;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Portofolio Nanda</h1>
+
+    <div class="section">
+        <p>Tentang Saya</p>
+        <p>Nganggur | Beban | Rebahan</p>
+    </div>
+
+    <div class="section">
+        <p>Keahlian</p>
+        <p>Main Game | Nonton Netflix | Tidur Siang</p>
+    </div>
+
+    <div class="section">
+        <p>Proyek</p>
+        <p>1. Tidur 10 jam berturut-turut</p>
+        <p>2. Menyusun bantal dan selimut dengan sempurna</p>
+        <p>3. Mengatur jadwal ngopi setiap hari</p>
+    </div>
+
+    <div class="section">
+        <p>Kontak</p>
+        <p>Hubungi saya kalau butuh teman ngopi!</p>
+    </div>
+
+    <div class="loading">Sedang memproses... 😴</div>
+
+</body>
+</html>
